@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: #000;
+  --background: #F8F9FA;
+  --text-color: #2D3748;
+  --text-color-soft: #A0AEC0;
+  --green: #4FD1C5;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,11 +19,35 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--text-color);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.ant-menu-item {
+  background-color: var(--background);
+  height: 56px !important;
+  color: var(--text-color-soft);
+}
+
+.ant-menu-item.ant-menu-item-selected {
+  background-color: white !important;
+  color: var(--text-color) !important;
+  height: 56px !important;
+}
+
+.ant-menu-item.ant-menu-item-active.ant-menu-item-selected {
+  opacity: 1 !important;
+  color: var(--text-color) !important;
+}
+
+.ant-menu-item.ant-menu-item-active {
+  opacity: 0.75 !important;
+  color: var(--text-color-soft) !important;
+}
+
+.ant-menu-title-content {
+  font-size: 12px;
+  margin-left: 10px;
 }

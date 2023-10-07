@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <MainTemplate>
-      <MenuItem/>
+      <div>tables</div>
     </MainTemplate>
   )
 }
