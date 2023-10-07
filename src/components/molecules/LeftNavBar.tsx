@@ -9,6 +9,7 @@ import { Button, Menu, MenuProps, Typography } from 'antd';
 import React, { useEffect, useState } from 'react';
 import MenuIcon from '../atoms/MenuIcon';
 import { useRouter } from 'next/router';
+import NeedHelpCard from '../atoms/NeedHelpCard';
 
 interface Iprops {
 
@@ -103,7 +104,9 @@ const LeftNavBar: React.FC<Iprops> = (props) => {
                     }
                 }}
             />
+
             <Typography className='ml-7 font-bold'>ACCOUNT PAGES</Typography>
+
             <Menu
                 selectedKeys={[selectedKey]}
                 mode="inline"
@@ -117,7 +120,10 @@ const LeftNavBar: React.FC<Iprops> = (props) => {
                         router.push('/tables')
                     }
                 }}
+                style={{ paddingBottom: "44px" }}
             />
+
+            <NeedHelpCard />
 
         </>
     )
