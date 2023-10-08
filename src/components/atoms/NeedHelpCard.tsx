@@ -17,7 +17,8 @@ const NeedHelpCard: React.FC<Iprops> = (props) => {
             <Typography className='pb-2 text-white' >Please check our docs</Typography>
             <Button block style={{ backgroundColor: "white", height: "35px", fontSize: "10px" }} className='font-bold'  >DOCUMENTATION</Button>
 
-        </div>)
+        </div>
+    )
 
 }
 
