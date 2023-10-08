@@ -1,8 +1,6 @@
-import { url } from 'inspector'
-import React from 'react'
-import MenuItem from './MenuItem'
-import MenuIcon from './MenuIcon'
 import { Button, Typography } from 'antd'
+import React from 'react'
+import MenuIcon from './MenuIcon'
 
 interface Iprops {
 

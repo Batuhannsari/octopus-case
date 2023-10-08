@@ -1,13 +1,7 @@
-import MenuItem from '@/components/atoms/MenuItem';
 import SignTopNav from '@/components/atoms/SignTopNav';
-import MainTemplate from '@/components/templates/MainTemplate';
-import { useAuthContext } from '@/context/AuthContext';
-import { Typography } from 'antd';
 import Image from 'next/image';
 
-
 export default function SignIn() {
-  const { deneme, setDeneme } = useAuthContext();
 
   return (
     <>

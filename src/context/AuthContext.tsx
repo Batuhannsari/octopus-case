@@ -10,11 +10,11 @@ type Props = {
 
 export default function AuthContextProvider({ children }: Props) {
 
-  const [deneme, setDeneme] = useState(false)
+  const [activePage, setActivePage] = useState("")
 
   const data: AuthContextType = {
-    deneme,
-    setDeneme,
+    activePage,
+    setActivePage,
   };
 
   return <Context.Provider value={data}>{children}</Context.Provider>;

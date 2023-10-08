@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
-import Template from "../atoms/Template";
-import LeftNavBar from "../molecules/LeftNavBar";
-import TopNav from "../atoms/TopNav";
 import { Typography } from "antd";
 import { useRouter } from "next/router";
+import React from "react";
+import TopNav from "../atoms/TopNav";
+import LeftNavBar from "../molecules/LeftNavBar";
 
 interface Props {
     children: React.ReactNode;

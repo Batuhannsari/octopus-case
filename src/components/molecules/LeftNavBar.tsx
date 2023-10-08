@@ -1,14 +1,7 @@
-import styles from '@/components/molecules/LeftNavBar.module.css';
-import {
-    ContainerOutlined,
-    DesktopOutlined,
-    MenuFoldOutlined,
-    MenuUnfoldOutlined
-} from '@ant-design/icons';
-import { Button, Menu, MenuProps, Typography } from 'antd';
+import { Menu, MenuProps, Typography } from 'antd';
+import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import MenuIcon from '../atoms/MenuIcon';
-import { useRouter } from 'next/router';
 import NeedHelpCard from '../atoms/NeedHelpCard';
 
 interface Iprops {
@@ -95,7 +88,7 @@ const LeftNavBar: React.FC<Iprops> = (props) => {
                 mode="inline"
                 theme="dark"
                 items={firstItems}
-                className={styles.antMenu}
+                style={{ backgroundColor: "var(--background)" }}
                 onClick={(e: MenuItemClickEvent) => {
                     if (e.key === MenuClickType.dashboard) {
                         router.push('/')
@@ -112,7 +105,6 @@ const LeftNavBar: React.FC<Iprops> = (props) => {
                 mode="inline"
                 theme="dark"
                 items={secondItems}
-                className={styles.antMenu}
                 onClick={(e: MenuItemClickEvent) => {
                     if (e.key === MenuClickType.signin) {
                         router.push('/signin')
@@ -120,7 +112,7 @@ const LeftNavBar: React.FC<Iprops> = (props) => {
                         router.push('/signup')
                     }
                 }}
-                style={{ paddingBottom: "44px" }}
+                style={{ paddingBottom: "44px", backgroundColor: "var(--background)" }}
             />
 
             <NeedHelpCard />
