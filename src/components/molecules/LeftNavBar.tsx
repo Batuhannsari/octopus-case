@@ -114,10 +114,10 @@ const LeftNavBar: React.FC<Iprops> = (props) => {
                 items={secondItems}
                 className={styles.antMenu}
                 onClick={(e: MenuItemClickEvent) => {
-                    if (e.key === MenuClickType.dashboard) {
-                        router.push('/')
-                    } else if (e.key === MenuClickType.tables) {
-                        router.push('/tables')
+                    if (e.key === MenuClickType.signin) {
+                        router.push('/signin')
+                    } else if (e.key === MenuClickType.signup) {
+                        router.push('/signup')
                     }
                 }}
                 style={{ paddingBottom: "44px" }}

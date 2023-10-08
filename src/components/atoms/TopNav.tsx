@@ -14,12 +14,16 @@ const TopNav: React.FC<Iprops> = (props) => {
             <div className='flex justify-end'>
 
                 <Input className='w-48 rounded-2xl mr-4' size="large" placeholder="Type here..." prefix={<Image className='mr-2' width={15} height={15} alt='' src={'/Icons/searchBlack.svg'} />} />
-                <Image className='mr-1' width={12} height={12} alt='' src={'/Icons/personGrey.svg'} />
-                <Link className='self-center mr-4' href={"/signin"} >
+                <Link className='flex flex-row self-center mr-4' href={"/signin"} >
+                    <Image className='mr-1' width={12} height={12} alt='' src={'/Icons/personGrey.svg'} />
                     <Typography style={{ fontSize: "12px" }} className='font-bold'>Sign In</Typography>
                 </Link>
-                <Image className='mr-4' width={12} height={12} alt='' src={'/Icons/settingsGrey.svg'} />
-                <Image className='' width={12} height={12} alt='' src={'/Icons/notificationGrey.svg'} />
+                <div className='mr-4 self-center cursor-pointer' >
+                    <Image width={12} height={12} alt='' src={'/Icons/settingsGrey.svg'} />
+                </div>
+                <div className='self-center cursor-pointer' >
+                    <Image width={12} height={12} alt='' src={'/Icons/notificationGrey.svg'} />
+                </div>
 
             </div>
 
