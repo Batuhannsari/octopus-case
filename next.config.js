@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
+  images: {
+    domains: ['robohash.org'], // Kullandığınız görüntü kaynağının hostname'unu burada tanımlayın
+  },
+
 }
 
 module.exports = nextConfig

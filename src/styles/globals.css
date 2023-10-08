@@ -61,3 +61,13 @@ body {
 .ant-switch-checked {
   background-color: var(--green) !important;
 }
+
+.ant-table-cell-fix-left {
+  font-size: 10px !important;
+  color: var(--text-color-soft) !important;
+  background-color: white !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

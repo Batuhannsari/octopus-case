@@ -1,14 +1,30 @@
-import MenuItem from '@/components/atoms/MenuItem';
+import AuthorsTable from '@/components/organisms/AuthorsTable';
+import ProjectsTable from '@/components/organisms/ProjectsTable';
 import MainTemplate from '@/components/templates/MainTemplate';
-import { useAuthContext } from '@/context/AuthContext';
+import { useDummyDataContext } from '@/context/DummyDataContext';
+import { useEffect } from 'react';
 
 
 export default function Home() {
-  const { deneme, setDeneme } = useAuthContext();
+  const { users, getUsers } = useDummyDataContext()
+
+  useEffect(() => {
+    getUsers()
+  }, [])
+
+  console.log('users', users)
 
   return (
     <MainTemplate>
-      <div>tables</div>
+
+      <div className='flex flex-col gap-6'>
+
+        <AuthorsTable />
+
+        <ProjectsTable />
+
+      </div>
+
     </MainTemplate>
   )
 }

@@ -10,7 +10,7 @@ export default function SignIn() {
 
       <div className='flex flex-col absolute w-full mt-36 gap-1'>
 
-        <Typography className='flex text-white max-w-xs self-center font-bold' style={{ fontSize: "32px" }} >Welcome!</Typography>
+        <Typography className='flex text-white max-w-xs self-center font-bold text-[32px]'>Welcome!</Typography>
         <Typography className='flex text-white max-w-xs self-center text-center'>Use these awesome forms to login or create new account in your project for free.</Typography>
 
         <div className='w-full max-w-md self-center mt-16'>
