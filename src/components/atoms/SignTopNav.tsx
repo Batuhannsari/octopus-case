@@ -16,7 +16,7 @@ const SignTopNav: React.FC<Iprops> = (props) => {
 
 
     return (
-        <div className='flex absolute w-full justify-center'>
+        <div className='flex absolute w-full justify-center z-20'>
             <div className={`flex flex-row align-middle justify-between w-full max-w-5xl ${activePage === "signin" ? "backdrop-blur-3xl" : activePage === "signup" ? "backdrop-blur-none" : ""} mt-6 px-5 py-4 rounded-2xl ${activePage === "signin" ? "bg-white" : activePage === "signup" ? "bg-none" : ""} opacity-90`}>
 
                 <Link href={'/'} >
