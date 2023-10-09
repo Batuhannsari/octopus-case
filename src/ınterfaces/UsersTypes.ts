@@ -61,3 +61,25 @@ export interface Company {
     title: string
 }
 
+export interface CurrentUser {
+    id: number
+    username: string
+    email: string
+    firstName: string
+    lastName: string
+    gender: string
+    image: string
+    token: string
+}
+
+export const CurrentUserDefault: CurrentUser = {
+    id: 0,
+    username: "",
+    email: "",
+    firstName: "",
+    lastName: "",
+    gender: "",
+    image: "",
+    token: "",
+};
+

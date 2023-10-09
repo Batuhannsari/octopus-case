@@ -1,4 +1,4 @@
 import axios from "axios";
 
-export const getAllUsers = () => axios.get(`https://dummyjson.com/users`);
+export const getUsersRequest = () => axios.get(`https://dummyjson.com/users`);
 

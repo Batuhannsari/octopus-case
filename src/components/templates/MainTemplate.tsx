@@ -23,10 +23,6 @@ function MainTemplate({ children }: Props) {
 
     return (
         <>
-            {/* <TopNav />
-            <Container maxWidth="xl" sx={{ mt: 4 }}>
-                {children}
-            </Container> */}
             <div className="flex flex-row h-screen">
                 <div className="w-64 px-4 py-8" >
                     <LeftNavBar />
