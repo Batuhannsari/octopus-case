@@ -30,7 +30,7 @@ const ProjectsTableForDashboard: React.FC<Iprops> = (props) => {
             budget: "$14,000",
             status: "Working",
             completion: 60,
-            id: 1
+            id: 1,
         },
         {
             image: <Image width={20} height={20} alt='' src={'/Atlassian.svg'} />,
