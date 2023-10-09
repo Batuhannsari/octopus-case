@@ -9,7 +9,7 @@ interface Iprops {
 const MenuIcon: React.FC<Iprops> = (props) => {
 
     return (
-        <div style={{ width: "30px", height: "30px", backgroundColor: `${props.isActive === true ? "var(--green)" : "white"}` }} className={`flex justify-center align-middle  rounded-xl`}>
+        <div className={`flex justify-center align-middle w-[30px] h-[30px] rounded-xl ${props.isActive ? "bg-greenBase" : "bg-white"}`}>
             <Image alt='' src={props.src} width={15} height={15} />
         </div>
     )

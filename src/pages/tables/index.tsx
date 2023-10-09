@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 
 export default function Home() {
-  const { users, getUsers } = useDummyDataContext()
+  const { getUsers } = useDummyDataContext()
 
   useEffect(() => {
     getUsers()

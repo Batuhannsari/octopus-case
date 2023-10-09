@@ -13,10 +13,10 @@ const AuthorCard: React.FC<Iprops> = (props) => {
 
     return (
         <div className='flex flex-row gap-4'>
-            <Image className='border border-[var(--text-color-soft)] rounded-xl' width={40} height={40} alt='' src={props?.data?.image || defaultImage} />
+            <Image className='border border-textSoft rounded-xl' width={40} height={40} alt='' src={props?.data?.image || defaultImage} />
             <div className='self-center'>
                 <Typography className='font-bold'>{props.data.firstName + " " + props.data.lastName}</Typography>
-                <Typography className='font-bold text-[var(--text-color-soft)]' /* buraya bak */>{props.data.email}</Typography>
+                <Typography className='font-bold text-textSoft'>{props.data.email}</Typography>
             </div>
         </div>
     )

@@ -1,13 +1,8 @@
 import { useDummyDataContext } from '@/context/DummyDataContext';
-import { User } from '@/ınterfaces/UsersTypes';
-import { Typography, Table, Tag, Progress, Avatar, Tooltip } from 'antd';
+import { Avatar, Progress, Table, Typography } from 'antd';
 import { ColumnsType } from 'antd/es/table';
-import React, { ReactNode, useEffect } from 'react'
-import AuthorCard from '../atoms/AuthorCard';
-import FunctionCard from '../atoms/FunctionCard';
-import dayjs from 'dayjs';
 import Image from 'next/image';
-import { AntDesignOutlined, MoreOutlined, UserOutlined } from '@ant-design/icons';
+import React, { ReactNode, useEffect } from 'react';
 
 interface Iprops {
 }
@@ -112,7 +107,7 @@ const ProjectsTableForDashboard: React.FC<Iprops> = (props) => {
             fixed: 'left',
             render: (a, data: ProjectType) =>
                 <div className='flex flex-col'>
-                    <Typography className='font-bold text-[var(--green)]'>{data?.completion || 0}%</Typography>
+                    <Typography className='font-bold text-greenBase'>{data?.completion || 0}%</Typography>
                     <Progress size={'small'} showInfo={false} strokeColor={"var(--green)"} percent={data?.completion || 0} />
                 </div>
         },
@@ -128,8 +123,8 @@ const ProjectsTableForDashboard: React.FC<Iprops> = (props) => {
             <Typography className='font-bold text-lg'>Projects</Typography>
             <div className='flex flex-row gap-1 mb-2'>
                 <Image width={15} height={15} alt='' src={"/Icons/agreeGreen.svg"} />
-                <Typography className='text-[var(--text-color-soft)] font-bold '>30 done</Typography>
-                <Typography className='text-[var(--text-color-soft)] '>this month</Typography>
+                <Typography className='text-textSoft font-bold '>30 done</Typography>
+                <Typography className='text-textSoft '>this month</Typography>
             </div>
             <Table rowKey={({ id }) => id} pagination={false} columns={columns} dataSource={projects} scroll={{ x: 800 }} />
         </div>

@@ -1,4 +1,5 @@
 import { Typography } from "antd";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import TopNav from "../atoms/TopNav";
@@ -14,8 +15,8 @@ function MainTemplate({ children }: Props) {
 
     const topNavigation = router.pathname.includes("tables") ? <div className='-mt-4'>
         <div className='flex flex-row'>
-            <Typography style={{ color: "var(--text-color-soft)", fontSize: "12px" }} className='pr-1'>Pages</Typography>
-            <Typography style={{ fontSize: "12px" }} >/ Tables</Typography>
+            <Link href={"/"} className='pr-1 text-textSoft text-xs'>Pages</Link>
+            <Typography className="text-xs">/ Tables</Typography>
         </div>
         <Typography className='font-bold'>Tables</Typography>
     </div> : <Typography className='font-bold'>Dashboard</Typography>

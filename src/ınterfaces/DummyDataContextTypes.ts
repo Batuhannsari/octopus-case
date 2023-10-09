@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react"
+import { Dispatch, SetStateAction } from "react";
 import { CurrentUser, User } from "./UsersTypes";
 
 export type DummyDataContextTypes = {

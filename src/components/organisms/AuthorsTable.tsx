@@ -1,11 +1,11 @@
 import { useDummyDataContext } from '@/context/DummyDataContext';
 import { User } from '@/ınterfaces/UsersTypes';
-import { Typography, Table, Tag } from 'antd';
+import { Table, Tag, Typography } from 'antd';
 import { ColumnsType } from 'antd/es/table';
-import React from 'react'
+import dayjs from 'dayjs';
+import React from 'react';
 import AuthorCard from '../atoms/AuthorCard';
 import FunctionCard from '../atoms/FunctionCard';
-import dayjs from 'dayjs';
 
 interface Iprops {
 }

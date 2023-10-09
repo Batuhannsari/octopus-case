@@ -26,22 +26,22 @@ const SignTopNav: React.FC<Iprops> = (props) => {
                 <div className='opacity-100 flex flex-row align-middle gap-7'>
                     <Link href={'/'} className='flex flex-row align-middle gap-1'>
                         <Image className='' width={12} height={12} alt='' src={activePage === "signin" ? '/Icons/dashboardBlue.svg' : activePage === "signup" ? '/Icons/dashboardWhite.svg' : ""} />
-                        <Typography style={{ fontSize: "10px", color: activePage === "signin" ? "var(--text-color)" : activePage === "signup" ? "white" : "" }} className='font-bold self-center'>DASHBOARD</Typography>
+                        <Typography style={{ color: activePage === "signin" ? "var(--text-color)" : activePage === "signup" ? "white" : "" }} className={`font-bold self-center text-[10px]`}>DASHBOARD</Typography>
                     </Link>
 
                     <div className='flex flex-row align-middle gap-1 cursor-pointer '>
                         <Image className='' width={12} height={12} alt='' src={activePage === "signin" ? '/Icons/personBlue.svg' : activePage === "signup" ? '/Icons/personWhite.svg' : ""} />
-                        <Typography style={{ fontSize: "10px", color: activePage === "signin" ? "var(--text-color)" : activePage === "signup" ? "white" : "" }} className='font-bold self-center'>PROFILE</Typography>
+                        <Typography style={{ color: activePage === "signin" ? "var(--text-color)" : activePage === "signup" ? "white" : "" }} className={`font-bold self-center text-[10px]`}>PROFILE</Typography>
                     </div>
 
                     <Link href={'/signup'} className='flex flex-row align-middle gap-1'>
                         <Image className='' width={12} height={12} alt='' src={activePage === "signin" ? '/Icons/signUpBlue.svg' : activePage === "signup" ? '/Icons/signUpWhite.svg' : ""} />
-                        <Typography style={{ fontSize: "10px", color: activePage === "signin" ? "var(--text-color)" : activePage === "signup" ? "white" : "" }} className='font-bold self-center'>SIGN UP</Typography>
+                        <Typography style={{ color: activePage === "signin" ? "var(--text-color)" : activePage === "signup" ? "white" : "" }} className={`font-bold self-center text-[10px]`}>SIGN UP</Typography>
                     </Link>
 
                     <Link href={'/signin'} className='flex flex-row align-middle gap-1'>
                         <Image className='' width={12} height={12} alt='' src={activePage === "signin" ? '/Icons/keyBlue.svg' : activePage === "signup" ? '/Icons/keyWhite.svg' : ""} />
-                        <Typography style={{ fontSize: "10px", color: activePage === "signin" ? "var(--text-color)" : activePage === "signup" ? "white" : "" }} className='font-bold self-center'>SIGN IN</Typography>
+                        <Typography style={{ color: activePage === "signin" ? "var(--text-color)" : activePage === "signup" ? "white" : "" }} className={`font-bold self-center text-[10px]`}>SIGN IN</Typography>
                     </Link>
 
                 </div>

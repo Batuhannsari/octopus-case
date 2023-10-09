@@ -1,9 +1,9 @@
 import { Typography } from 'antd'
 import Image from 'next/image'
 import React from 'react'
-import SalesOverviewChart from '../atoms/SalesOverviewChart'
-import ActiveUsersChart from '../atoms/ActiveUsersChart'
 import ActiveUsersCardItem from '../atoms/ActiveUsersCardItem'
+import ActiveUsersChart from '../atoms/ActiveUsersChart'
+import SalesOverviewChart from '../atoms/SalesOverviewChart'
 
 interface Iprops {
 
@@ -23,7 +23,7 @@ const DashboardChart: React.FC<Iprops> = (props) => {
                         <Typography className='font-bold text-lg'>Active Users</Typography>
                         <div className='flex flex-row gap-1'>
                             <Typography className='font-bold text-[#48BB78]' >(+23)</Typography>
-                            <Typography className='text-[var(--text-color-soft)]'>than last week</Typography>
+                            <Typography className='text-textSoft'>than last week</Typography>
                         </div>
                     </div>
 
@@ -43,7 +43,7 @@ const DashboardChart: React.FC<Iprops> = (props) => {
                     <Typography className='font-bold text-lg'>Sales overview</Typography>
                     <div className='flex flex-row gap-1'>
                         <Typography className='font-bold text-[#48BB78]'>(+5) more</Typography>
-                        <Typography className='text-[var(--text-color-soft)]'>in 2021</Typography>
+                        <Typography className='text-textSoft'>in 2021</Typography>
                     </div>
                 </div>
 

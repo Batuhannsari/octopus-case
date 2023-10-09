@@ -39,9 +39,9 @@ const SignInCard: React.FC<Iprops> = (props) => {
         <div className='flex flex-col w-full max-w-sm'>
 
             <div className='flex flex-col gap-2 mb-9'>
-                <Typography style={{ color: "var(--green)", fontSize: "2rem" }} className='font-bold '>Welcome Back</Typography>
+                <Typography className='font-bold text-greenBase text-[32px]'>Welcome Back</Typography>
 
-                <Typography style={{ color: "var(--text-color-soft)" }} >Enter your email and password to sign in</Typography>
+                <Typography className='text-textSoft' >Enter your email and password to sign in</Typography>
             </div>
 
             <div className='flex flex-col w-full gap-1 mb-6'>
@@ -59,12 +59,12 @@ const SignInCard: React.FC<Iprops> = (props) => {
                 <Typography className='ml-1 text-xs self-center'>Remember me</Typography>
             </div>
 
-            <Button onClick={() => { handleLogin() }} style={{ backgroundColor: "var(--green)", fontSize: "10px" }} className='h-11 rounded-xl text-white font-bold mb-6' >SIGN IN</Button>
+            <Button onClick={() => { handleLogin() }} className='h-11 rounded-xl text-white font-bold mb-6 bg-greenBase text-[10px]' >SIGN IN</Button>
 
             <div className='flex flex-row gap-1 justify-center '>
-                <Typography style={{ color: "var(--text-color-soft)" }} className=''>Don't have an account?</Typography>
+                <Typography className='text-textSoft'>Don't have an account?</Typography>
                 <Link href={"/signup"}>
-                    <Typography style={{ color: "var(--green)" }} className='font-bold'>Sign up</Typography>
+                    <Typography className='font-bold text-greenBase'>Sign up</Typography>
                 </Link>
             </div>
 

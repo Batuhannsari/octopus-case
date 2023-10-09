@@ -11,7 +11,7 @@ const FunctionCard: React.FC<Iprops> = (props) => {
     return (
         <div className=''>
             <Typography className='font-bold'>{props.data.company.title}</Typography>
-            <Typography className='font-bold text-[var(--text-color-soft)]' >{props.data.company.department}</Typography>
+            <Typography className='font-bold text-textSoft' >{props.data.company.department}</Typography>
         </div>)
 
 }

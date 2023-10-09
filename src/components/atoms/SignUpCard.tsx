@@ -26,7 +26,7 @@ const SignUpCard: React.FC<Iprops> = (props) => {
                 </div>
             </div>
 
-            <Typography style={{ color: "var(--text-color-soft)" }} className='self-center font-bold text-lg'>Or</Typography>
+            <Typography className='self-center font-bold text-lg text-textSoft'>Or</Typography>
 
             <div className='flex flex-col w-full gap-1'>
                 <Typography className='ml-1'>Name</Typography>
@@ -48,12 +48,12 @@ const SignUpCard: React.FC<Iprops> = (props) => {
                 <Typography className='ml-1 text-xs self-center'>Remember me</Typography>
             </div>
 
-            <Button style={{ backgroundColor: "var(--green)", fontSize: "10px" }} className='h-11 rounded-xl text-white font-bold' >SIGN UP</Button>
+            <Button className='h-11 text-[10px] bg-greenBase rounded-xl text-white font-bold' >SIGN UP</Button>
 
             <div className='flex flex-row gap-1 justify-center '>
-                <Typography style={{ color: "var(--text-color-soft)" }} className=''>Already have an account?</Typography>
+                <Typography className='text-textSoft'>Already have an account?</Typography>
                 <Link href={"/signin"}>
-                    <Typography style={{ color: "var(--green)" }} className='font-bold'>Sign in</Typography>
+                    <Typography className='font-bold text-greenBase'>Sign in</Typography>
                 </Link>
             </div>
 

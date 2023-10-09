@@ -1,7 +1,6 @@
 import { Steps, Typography } from 'antd'
 import Image from 'next/image'
 import React from 'react'
-import ProjectsTable from '../organisms/ProjectsTable'
 import ProjectsTableForDashboard from '../organisms/ProjectsTableForDashboard'
 
 interface Iprops {
@@ -27,7 +26,7 @@ const DashboardBottomItems: React.FC<Iprops> = (props) => {
                     <Typography className='font-bold text-lg'>Orders overview</Typography>
                     <div className='flex flex-row gap-1'>
                         <Typography className='font-bold text-[#48BB78]' >(+30%)</Typography>
-                        <Typography className='text-[var(--text-color-soft)]'>this month</Typography>
+                        <Typography className='text-textSoft,'>this month</Typography>
                     </div>
                 </div>
 
@@ -36,12 +35,12 @@ const DashboardBottomItems: React.FC<Iprops> = (props) => {
                     size="small"
                     current={1}
                     items={[
-                        { title: <Typography className='font-bold'>'$2400, Design changes'</Typography>, description: <Typography className='font-bold text-xs text-[var(--text-color-soft)]'>"22 DEC 7:20 PM"</Typography>, icon: <Image width={16} height={16} alt='' src={'/Icons/notificationGreen.svg'} /> },
-                        { title: <Typography className='font-bold'>'New order #4219423'</Typography>, description: <Typography className='font-bold text-xs text-[var(--text-color-soft)]'>"21 DEC 11:21 PM"</Typography>, icon: <Image width={16} height={16} alt='' src={'/Icons/web3.svg'} /> },
-                        { title: <Typography className='font-bold'>'Server Payments for April'</Typography>, description: <Typography className='font-bold text-xs text-[var(--text-color-soft)]'>"21 DEC 9:28 PM"</Typography>, icon: <Image width={16} height={16} alt='' src={'/Icons/cartBlue.svg'} /> },
-                        { title: <Typography className='font-bold'>'New card added for order #3210145'</Typography>, description: <Typography className='font-bold text-xs text-[var(--text-color-soft)]'>"20 DEC 3:52 PM"</Typography>, icon: <Image width={16} height={16} alt='' src={'/Icons/walletYellow.svg'} /> },
-                        { title: <Typography className='font-bold'>'Unlock packages for Development'</Typography>, description: <Typography className='font-bold text-xs text-[var(--text-color-soft)]'>"19 DEC 11:35 PM"</Typography>, icon: <Image width={16} height={16} alt='' src={'/Icons/unknownPurple.svg'} /> },
-                        { title: <Typography className='font-bold'>'New order #9851258'</Typography>, description: <Typography className='font-bold text-xs text-[var(--text-color-soft)]'>"18 DEC 4:41 PM"</Typography>, icon: <Image width={16} height={16} alt='' src={'/XD.svg'} /> },
+                        { title: <Typography className='font-bold'>'$2400, Design changes'</Typography>, description: <Typography className='font-bold text-xs text-textSoft'>"22 DEC 7:20 PM"</Typography>, icon: <Image width={16} height={16} alt='' src={'/Icons/notificationGreen.svg'} /> },
+                        { title: <Typography className='font-bold'>'New order #4219423'</Typography>, description: <Typography className='font-bold text-xs text-textSoft'>"21 DEC 11:21 PM"</Typography>, icon: <Image width={16} height={16} alt='' src={'/Icons/web3.svg'} /> },
+                        { title: <Typography className='font-bold'>'Server Payments for April'</Typography>, description: <Typography className='font-bold text-xs text-textSoft'>"21 DEC 9:28 PM"</Typography>, icon: <Image width={16} height={16} alt='' src={'/Icons/cartBlue.svg'} /> },
+                        { title: <Typography className='font-bold'>'New card added for order #3210145'</Typography>, description: <Typography className='font-bold text-xs text-textSoft'>"20 DEC 3:52 PM"</Typography>, icon: <Image width={16} height={16} alt='' src={'/Icons/walletYellow.svg'} /> },
+                        { title: <Typography className='font-bold'>'Unlock packages for Development'</Typography>, description: <Typography className='font-bold text-xs text-textSoft'>"19 DEC 11:35 PM"</Typography>, icon: <Image width={16} height={16} alt='' src={'/Icons/unknownPurple.svg'} /> },
+                        { title: <Typography className='font-bold'>'New order #9851258'</Typography>, description: <Typography className='font-bold text-xs text-textSoft'>"18 DEC 4:41 PM"</Typography>, icon: <Image width={16} height={16} alt='' src={'/XD.svg'} /> },
                     ]}
                 />
 

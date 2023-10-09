@@ -1,6 +1,6 @@
+import Image from 'next/image'
 import React from 'react'
 import DashboardTopItem from '../atoms/DashboardTopItem'
-import Image from 'next/image'
 
 interface Iprops {
 

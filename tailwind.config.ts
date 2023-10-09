@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        green: "#fff" /* buraya bak */
+        textSoft: "#A0AEC0",
+        greenBase: "#4FD1C5",
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

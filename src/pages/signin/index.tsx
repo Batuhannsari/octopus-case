@@ -1,8 +1,6 @@
 import SignInCard from '@/components/atoms/SignInCard';
 import SignTopNav from '@/components/atoms/SignTopNav';
-import SignUpCard from '@/components/atoms/SignUpCard';
 import Image from 'next/image';
-import { useState } from 'react';
 
 export default function SignIn() {
 
