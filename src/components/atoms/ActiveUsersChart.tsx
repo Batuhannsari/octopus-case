@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Area, AreaChart, Bar, CartesianGrid, ComposedChart, Legend, Line, Tooltip, XAxis, YAxis } from 'recharts';
 
 interface Iprops {
@@ -7,34 +7,40 @@ interface Iprops {
 
 const ActiveUsersChart: React.FC<Iprops> = (props) => {
 
+    const [isClient, setIsClient] = useState(false)
+
+    useEffect(() => {
+        setIsClient(true)
+    }, [])
+
 
     const data = [
         {
-            "pv": 350,
+            pv: 350,
         },
         {
-            "pv": 250,
+            pv: 250,
         },
         {
-            "pv": 120,
+            pv: 120,
         },
         {
-            "pv": 310,
+            pv: 310,
         },
         {
-            "pv": 500,
+            pv: 500,
         },
         {
-            "pv": 400,
+            pv: 400,
         },
         {
-            "pv": 450,
+            pv: 450,
         },
         {
-            "pv": 280,
+            pv: 280,
         },
         {
-            "pv": 170,
+            pv: 170,
         },
     ]
 
@@ -44,7 +50,7 @@ const ActiveUsersChart: React.FC<Iprops> = (props) => {
             <ComposedChart margin={{ bottom: 0, left: 30, right: 0, top: 0 }} width={560} height={222} data={data}>
                 <YAxis tickMargin={50} stroke={"var(--text-color-soft)"} />
                 <Tooltip />
-                <Bar radius={15} dataKey="pv" barSize={7} fill="#fff" />
+                {isClient && <Bar radius={15} dataKey={"pv"} barSize={7} fill="#fff" />}
             </ComposedChart>
         </div>
 

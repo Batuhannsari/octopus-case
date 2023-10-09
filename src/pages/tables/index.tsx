@@ -12,8 +12,6 @@ export default function Home() {
     getUsers()
   }, [])
 
-  console.log('users', users)
-
   return (
     <MainTemplate>
 

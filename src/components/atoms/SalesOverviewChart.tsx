@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Area, AreaChart, CartesianGrid, Tooltip, XAxis, YAxis } from 'recharts';
 
 interface Iprops {
@@ -6,7 +6,11 @@ interface Iprops {
 }
 
 const SalesOverviewChart: React.FC<Iprops> = (props) => {
+    const [isClient, setIsClient] = useState(false)
 
+    useEffect(() => {
+        setIsClient(true)
+    }, [])
 
     const data = [
         {
@@ -96,8 +100,13 @@ const SalesOverviewChart: React.FC<Iprops> = (props) => {
             <YAxis fontSize={10} tickMargin={24} />
             <CartesianGrid strokeWidth={0.3} strokeDasharray={"6 1"} vertical={false} />
             <Tooltip />
-            <Area type="monotone" dataKey="uv" stroke="#4FD1C5" fillOpacity={1} fill="url(#colorUv)" />
-            <Area type="monotone" dataKey="pv" stroke="#2D3748" fillOpacity={1} fill="url(#colorPv)" />
+            {
+                isClient &&
+                <>
+                    <Area type="monotone" dataKey="uv" stroke="#4FD1C5" fillOpacity={1} fill="url(#colorUv)" />
+                    <Area type="monotone" dataKey="pv" stroke="#2D3748" fillOpacity={1} fill="url(#colorPv)" />
+                </>
+            }
         </AreaChart >
 
     )

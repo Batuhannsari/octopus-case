@@ -9,8 +9,6 @@ interface Iprops {
 
 const AuthorCard: React.FC<Iprops> = (props) => {
 
-    console.log('props.data', props.data)
-
     const defaultImage = "https://robohash.org/hicveldicta.png"
 
     return (

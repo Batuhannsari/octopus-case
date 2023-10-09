@@ -1,3 +1,4 @@
+import DashboardBottomItems from '@/components/molecules/DashboardBottomItems';
 import DashboardChart from '@/components/molecules/DashboardChart';
 import DashboardReadMore from '@/components/molecules/DashboardReadMore';
 import DashboardTopItems from '@/components/molecules/DashboardTopItems';
@@ -15,6 +16,8 @@ export default function Home() {
         <DashboardReadMore />
 
         <DashboardChart />
+
+        <DashboardBottomItems />
 
       </div>
 

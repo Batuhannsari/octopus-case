@@ -1,13 +1,13 @@
 import { useDummyDataContext } from '@/context/DummyDataContext';
 import { User } from '@/ınterfaces/UsersTypes';
-import { Typography, Table, Tag, Progress } from 'antd';
+import { Typography, Table, Tag, Progress, Avatar, Tooltip } from 'antd';
 import { ColumnsType } from 'antd/es/table';
-import React, { ReactNode } from 'react'
+import React, { ReactNode, useEffect } from 'react'
 import AuthorCard from '../atoms/AuthorCard';
 import FunctionCard from '../atoms/FunctionCard';
 import dayjs from 'dayjs';
 import Image from 'next/image';
-import { MoreOutlined } from '@ant-design/icons';
+import { AntDesignOutlined, MoreOutlined, UserOutlined } from '@ant-design/icons';
 
 interface Iprops {
 }
@@ -19,10 +19,9 @@ export type ProjectType = {
     completion: number
 }
 
-const ProjectsTable: React.FC<Iprops> = (props) => {
+const ProjectsTableForDashboard: React.FC<Iprops> = (props) => {
 
     const { users, getUsers } = useDummyDataContext()
-
 
     const projects = [
         {
@@ -72,7 +71,7 @@ const ProjectsTable: React.FC<Iprops> = (props) => {
 
         {
             title: 'COMPANIES',
-            width: 350,
+            width: 220,
             dataIndex: 'name',
             key: 'name',
             fixed: 'left',
@@ -83,20 +82,27 @@ const ProjectsTable: React.FC<Iprops> = (props) => {
                 </div>
         },
         {
+            title: 'MEMBERS',
+            width: 100,
+            dataIndex: 'age',
+            key: 'age',
+            fixed: 'left',
+            render: (a, data: ProjectType) =>
+                <Avatar.Group size={'small'}>
+                    {
+                        users.splice(0, 5).map((v, i) => (
+                            <Avatar key={i} style={{ backgroundColor: '#e5e5e5' }} src={v.image} />
+                        ))
+                    }
+                </Avatar.Group>
+        },
+        {
             title: 'BUDGET',
             width: 100,
             dataIndex: 'age',
             key: 'age',
             fixed: 'left',
             render: (a, data) => <Typography className='font-bold'>{data.budget || "Not set"}</Typography>
-        },
-        {
-            title: 'STATUS',
-            width: 100,
-            dataIndex: 'age',
-            key: 'age',
-            fixed: 'left',
-            render: (a, data: ProjectType) => <Typography className='font-bold'>{data.status}</Typography>
         },
         {
             title: 'COMPLETION',
@@ -110,27 +116,24 @@ const ProjectsTable: React.FC<Iprops> = (props) => {
                     <Progress size={'small'} showInfo={false} strokeColor={"var(--green)"} percent={data?.completion || 0} />
                 </div>
         },
-        {
-            title: '',
-            key: 'operation',
-            fixed: 'right',
-            align: "center",
-            width: 100,
-            render: () => <a><MoreOutlined /></a>,
-        },
     ];
 
+    useEffect(() => {
+        getUsers()
+    }, [])
+
+
     return (
-        <div className='bg-white p-6 rounded-2xl'>
+        <div className=''>
             <Typography className='font-bold text-lg'>Projects</Typography>
             <div className='flex flex-row gap-1 mb-2'>
                 <Image width={15} height={15} alt='' src={"/Icons/agreeGreen.svg"} />
                 <Typography className='text-[var(--text-color-soft)] font-bold '>30 done</Typography>
                 <Typography className='text-[var(--text-color-soft)] '>this month</Typography>
             </div>
-            <Table rowKey={({ id }) => id} pagination={false} columns={columns} dataSource={projects} scroll={{ x: 1300 }} />
+            <Table rowKey={({ id }) => id} pagination={false} columns={columns} dataSource={projects} scroll={{ x: 800 }} />
         </div>
     )
 }
 
-export default ProjectsTable
+export default ProjectsTableForDashboard
